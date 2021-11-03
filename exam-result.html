@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Invoice | Clubsbasic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="img/LOGO%20Asset%2013ldpi.png">
+    <style>
+        /* page */
+        html {
+            font: 14px/1 'Open Sans', sans-serif;
+            overflow: auto;
+            padding: 0.5in;
+            background: #999;
+            cursor: default;
+        }
+
+        body {
+            box-sizing: border-box;
+            height: 11in;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0.5in;
+            width: 8.5in;
+            background: #FFF;
+            border-radius: 1px;
+            box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+        }
+
+        @media print {
+
+            * {
+                -webkit-print-color-adjust: exact;
+            }
+
+            html {
+                background: none;
+                padding: 0;
+            }
+
+            body {
+                box-shadow: none;
+                margin: 0;
+            }
+
+        }
+
+        @page {
+            margin: 0;
+        }
+
+        /* header */
+        /* main css */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .exam-result-head p {
+            color: #6d6d6d;
+        }
+
+        .exam-result-head p i {
+            margin-right: 5px;
+        }
+
+        .feedback {
+            padding: 5px 0 20px 0;
+        }
+
+        .feedback h4 {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .fb {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .carrect i {
+            color: green;
+        }
+
+        .incarrect i {
+            color: red;
+        }
+
+        .missed i {
+            color: #00C6FF;
+        }
+
+        .ans-box>span {
+            display: block;
+            padding: 3px 0;
+        }
+
+        .ans-list li {
+            list-style: none;
+            position: relative;
+            padding-left: 30px;
+            padding-top: 8px;
+        }
+
+        .ans-icon {
+            position: absolute;
+            left: 5px;
+            top: 8px;
+        }
+
+        .carrect.fa {
+            color: green;
+        }
+
+        .incarrect.fa {
+            color: red;
+        }
+
+        .missed.fa {
+            color: #00C6FF;
+        }
+
+        .ans-list>li>span:first-child {
+            padding-right: 8px;
+        }
+
+        .border-box {
+            border: 1px solid #ccc;
+            padding: 5px 10px 10px 10px;
+            border-top: none;
+
+        }
+
+        .ans-box>h4 {
+            background: #ededed;
+            margin: 0;
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .border-box p {
+            margin: 0;
+            padding: 8px;
+            background: #f4f4f4;
+            margin-bottom: 5px;
+        }
+
+        .border-box>span {
+            display: block;
+            padding-top: 5px;
+        }
+
+        .ans-box {
+            padding-bottom: 15px;
+        }
+
+        .btn-custom {
+            background: #00C6FF;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .btn-custom:hover {
+            color: #fff;
+            border: none;
+            outline: none;
+            background: rgba(75, 208, 245, 0.9);
+        }
+
+        .btn-custom:focus {
+            outline: none;
+        }
+
+        /* end main css */
+
+    </style>
+</head>
+
+<body>
+    <section class="exam-result-head">
+        <h3> Online Exam 8</h3>
+        <p><i class="fa fa-clock-o"></i><b>Time Left:</b>
+            1:05:30
+        </p>
+    </section>
+    <section class="feedback">
+        <h4>Feedback</h4>
+        <div class="clearfix">
+            <span class="fb carrect"><i class="fa fa-check"></i> Correctly Answered</span>
+            <span class="fb incarrect"> <i class="fa fa-times"></i> Incorrectly Answered</span>
+            <span class="fb missed"> <i class="fa fa-long-arrow-right"></i> Missed Correct Option</span>
+        </div>
+    </section>
+    <section class="answer-section clearfix">
+        <div class="ans-box clearfix">
+            <h4>Questin 1 of 80</h4>
+            <div class="border-box">
+                <p>None of the squre properly drow</p>
+                <span>Correct answer : C </span>
+                <span>Your Choose : B </span>
+                <div class="ans-list">
+                    <li><span>A)</span>is
+                        <span class="ans-icon">
+
+                        </span>
+                    </li>
+                    <li><span>B)</span>was
+                        <span class="ans-icon">
+                            <i class="fa fa-times incarrect"></i>
+                        </span>
+                    </li>
+                    <li><span>C)</span>were
+                        <span class="ans-icon">
+                            <i class="fa fa-long-arrow-right missed"></i>
+                        </span>
+                    </li>
+                    <li><span>D)</span>has
+                        <span class="ans-icon">
+                            <!--                      <i class="fa fa-facebook"></i>-->
+                        </span>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="ans-box clearfix">
+            <h4>Questin 1 of 80</h4>
+            <div class="border-box">
+                <p>None of the squre properly drow</p>
+                <span>Correct answer : C </span>
+                <span>Your Choose : C </span>
+                <div class="ans-list">
+                    <li><span>A)</span>is
+                        <span class="ans-icon">
+
+                        </span>
+                    </li>
+                    <li><span>B)</span>was
+                        <span class="ans-icon">
+
+                        </span>
+                    </li>
+                    <li><span>C)</span>were
+                        <span class="ans-icon">
+                            <i class="fa fa-check carrect"></i>
+                        </span>
+                    </li>
+                    <li><span>D)</span>has
+                        <span class="ans-icon">
+
+                        </span>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: right">
+            <button type="submit" class="btn-custom">Next</button>
+        </div>
+    </section>
+
+</body>
+
+</html>
